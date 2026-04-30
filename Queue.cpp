@@ -29,7 +29,7 @@ void QueueArray::enqueue(int value) {
         std::cout << "Queue Overflow (Array)\n";
         return;
     }
-    // Wrap rear around using modulo; this is what makes it circular
+    // Wrap rear around using modulos; this is what makes it circular
     rear = (rear + 1) % capacity;
     arr[rear] = value;
     count++;
@@ -41,11 +41,15 @@ int QueueArray::dequeue() {
         return -1;
     }
     int value = arr[front];
-    // Wrap front around using modulo; reclaims space at the start
+    // Wrap front around using modulos; reclaims space at the start
     front = (front + 1) % capacity;
     count--;
     return value;
 }
+/* =========================
+   QUEUE - LINKED LIST
+   ========================= */
+
 QueueLinkedList::QueueLinkedList() {
     front = rear = nullptr;
 }
@@ -57,7 +61,6 @@ QueueLinkedList::~QueueLinkedList() {
 }
 
 void QueueLinkedList::enqueue(int value) {
-    // FIXED: Added "Node* newNode = new" to allocate memory
     Node* newNode = new Node(value); 
     
     if (rear) {
@@ -82,7 +85,7 @@ int QueueLinkedList::dequeue() {
     delete temp;
     
     if (!front) {
-        rear = nullptr; // Queue is now empty
+        rear = nullptr; 
     }
     return value;
 }
