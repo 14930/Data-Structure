@@ -22,5 +22,17 @@ public:
     bool isFull();
     bool isEmpty();
 };
+class QueueLinkedList {
+private:
+    Node* front;
+    Node* rear; 
+public:
+    QueueLinkedList();
+    ~QueueLinkedList();
+    void enqueue(int value);
+    int dequeue();
+    bool isEmpty();
+    bool isFull();
+};
 
 #endif

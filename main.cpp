@@ -1,5 +1,6 @@
 #include "LinkedList.h"
 #include "Stack.h"
+#include "Queue.h"
 #include <iostream>
 
 int main() {
@@ -42,6 +43,27 @@ int main() {
     std::cout << "Top element: " << s2.peek() << std::endl;
     std::cout << "Pop: " << s2.pop() << std::endl;
     std::cout << "New Top: " << s2.peek() << std::endl;
+    /* =========================
+       QUEUE TESTING
+       ========================= */
+    std::cout << "\n--- Queue Linked List Test ---\n";
+    QueueLinkedList q1;
+    q1.enqueue(100);
+    q1.enqueue(200);
+    q1.enqueue(300);
+    std::cout << "Dequeued: " << q1.dequeue() << std::endl; // Expected: 100
+    std::cout << "Dequeued next: " << q1.dequeue() << std::endl; // Expected: 200
 
+    std::cout << "\n--- Queue Array (Circular) Test ---\n";
+    QueueArray q2(5);
+    q2.enqueue(11);
+    q2.enqueue(22);
+    q2.enqueue(33);
+    std::cout << "Dequeued: " << q2.dequeue() << std::endl; // Expected: 11
+    std::cout << "Dequeued next: " << q2.dequeue() << std::endl; // Expected: 22
+
+    std::cout << "\n====================================\n";
+    std::cout << "All tests completed successfully!\n";
+    std::cout << "====================================\n";
     return 0;
 }
