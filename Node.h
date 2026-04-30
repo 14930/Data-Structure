@@ -6,7 +6,7 @@ struct Node {
     int data;     
     Node* next;  
     
-    // Default constructor
+    // Default constructor 
     Node() {
         data = 0;
         next = nullptr;
