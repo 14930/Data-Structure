@@ -1,8 +1,6 @@
 #include "Queue.h"
 
-/* =========================
-   QUEUE - CIRCULAR ARRAY
-   ========================= */
+/* QUEUE - CIRCULAR ARRAY*/
 
 QueueArray::QueueArray(int size) {
     capacity = size;

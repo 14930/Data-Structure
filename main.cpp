@@ -18,9 +18,7 @@ int main() {
     list.display(); // المتوقع: 20 -> 30 -> NULL
 
 
-    /* =========================
-       STACK TESTING (ADDED ONLY)
-       ========================= */
+    /*STACK TESTING*/
 
     std::cout << "\n--- Stack Linked List Test ---\n";
     StackLL s1;
@@ -43,9 +41,9 @@ int main() {
     std::cout << "Top element: " << s2.peek() << std::endl;
     std::cout << "Pop: " << s2.pop() << std::endl;
     std::cout << "New Top: " << s2.peek() << std::endl;
-    /* =========================
-       QUEUE TESTING
-       ========================= */
+
+    /*QUEUE TESTING*/
+    
     std::cout << "\n--- Queue Linked List Test ---\n";
     QueueLinkedList q1;
     q1.enqueue(100);

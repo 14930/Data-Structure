@@ -1,8 +1,6 @@
 #include "Stack.h"
 
-/* =========================
-   STACK - LINKED LIST
-   ========================= */
+/*STACK - LINKED LIST */
 
 StackLL::StackLL() {
     top = nullptr;
@@ -46,9 +44,7 @@ int StackLL::peek() {
     return top->data;
 }
 
-/* =========================
-   STACK - ARRAY
-   ========================= */
+/* STACK - ARRAY*/
 
 StackArray::StackArray(int size) {
     capacity = size;
